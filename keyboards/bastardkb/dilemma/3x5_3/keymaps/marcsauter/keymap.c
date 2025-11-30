@@ -17,6 +17,7 @@
  */
 
 #include QMK_KEYBOARD_H
+#include "keymap_swiss_de.h"
 
 enum dilemma_keymap_layers {
     LAYER_BASE = 0,
@@ -36,8 +37,8 @@ enum dilemma_keymap_layers {
 #define TAB_FUN LT(LAYER_FUNCTION, KC_TAB)
 #define ENT_SYM LT(LAYER_SYMBOLS, KC_ENT)
 #define BSP_NUM LT(LAYER_NUMERAL, KC_BSPC)
-#define PT_Z LT(LAYER_POINTER, KC_Z)
-#define PT_SLSH LT(LAYER_POINTER, KC_SLSH)
+#define PT_Z LT(LAYER_POINTER, CH_Y)
+#define PT_SLSH LT(LAYER_POINTER, CH_MINS)
 
 #ifndef POINTING_DEVICE_ENABLE
 #    define DRGSCRL KC_NO
@@ -50,9 +51,9 @@ enum dilemma_keymap_layers {
 /** \brief QWERTY layout (3 rows, 10 columns). */
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_split_3x5_3(
-       KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,
-       LGUI_T(KC_A), LALT_T(KC_S), LCTL_T(KC_D), LSFT_T(KC_F), KC_G, KC_H, LSFT_T(KC_J), LCTL_T(KC_K), LALT_T(KC_L), LGUI_T(KC_QUOT),
-       PT_Z,    RALT_T(KC_X),    KC_C,    KC_V,    KC_B,    KC_N,    KC_M, KC_COMM,  RALT_T(KC_DOT), PT_SLSH,
+       CH_Q,    CH_W,    CH_E,    CH_R,    CH_T,    CH_Z,    CH_U,    CH_I,    CH_O,    CH_P,
+       LGUI_T(CH_A), LALT_T(CH_S), LCTL_T(CH_D), LSFT_T(CH_F), CH_G, CH_H, LSFT_T(CH_J), LCTL_T(CH_K), LALT_T(CH_L), LGUI_T(CH_ADIA),
+       PT_Z,    RALT_T(CH_X),    CH_C,    CH_V,    CH_B,    CH_N,    CH_M, CH_COMM,  RALT_T(CH_DOT), PT_SLSH,
                       ESC_MED, TAB_FUN, SPC_NAV, ENT_SYM, BSP_NUM, KC_MUTE
   ),
 
@@ -122,13 +123,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *
  * Primary left-hand layer (right home thumb) is numerals and symbols. Numerals
  * are in the standard numpad locations with symbols in the remaining positions.
- * `KC_DOT` is duplicated from the base layer.
+ * `CH_DOT` is duplicated from the base layer.
  */
   [LAYER_NUMERAL] = LAYOUT_split_3x5_3(
-    KC_LBRC,    KC_7,    KC_8,    KC_9, KC_RBRC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
-    KC_SCLN,    KC_4,    KC_5,    KC_6,  KC_EQL, XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
-     KC_DOT,    KC_1,    KC_2,    KC_3, KC_BSLS, XXXXXXX, XXXXXXX, XXXXXXX, KC_RALT, XXXXXXX,
-                       KC_DOT, KC_MINS,    KC_0, XXXXXXX, _______, XXXXXXX
+    CH_UDIA,    CH_7,    CH_8,    CH_9, CH_DIAE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
+    CH_ODIA,    CH_4,    CH_5,    CH_6,  CH_CIRC, XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
+     CH_DOT,    CH_1,    CH_2,    CH_3, KC_BSLS, XXXXXXX, XXXXXXX, XXXXXXX, KC_RALT, XXXXXXX,
+                       CH_DOT, CH_QUOT,    CH_0, XXXXXXX, _______, XXXXXXX
   ),
 
 /**
@@ -142,7 +143,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_LCBR, KC_AMPR, KC_ASTR, KC_LPRN, KC_RCBR, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
     KC_COLN,  KC_DLR, KC_PERC, KC_CIRC, KC_PLUS, XXXXXXX, KC_LSFT, KC_LCTL, KC_LALT, KC_LGUI,
     KC_TILD, KC_EXLM,   KC_AT, KC_HASH, KC_PIPE, XXXXXXX, XXXXXXX, XXXXXXX, KC_RALT, XXXXXXX,
-                      KC_RPRN,  KC_GRV, KC_UNDS, _______, XXXXXXX, XXXXXXX
+                      KC_RPRN,  CH_SECT, KC_UNDS, _______, XXXXXXX, XXXXXXX
   ),
 };
 // clang-format on
