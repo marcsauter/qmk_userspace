@@ -10,15 +10,15 @@ This layout also supports VIA.
 
 Use the following keycodes to change the default DPI:
 
--   `POINTER_DEFAULT_DPI_FORWARD`: increases the DPI; decreases when shifted;
--   `POINTER_DEFAULT_DPI_REVERSE`: decreases the DPI; increases when shifted.
+- `POINTER_DEFAULT_DPI_FORWARD`: increases the DPI; decreases when shifted;
+- `POINTER_DEFAULT_DPI_REVERSE`: decreases the DPI; increases when shifted.
 
 There's a maximum of 16 possible values for the sniping mode DPI. See the [Dilemma documentation](../../README.md) for more information.
 
 Use the following keycodes to change the sniping mode DPI:
 
--   `POINTER_SNIPING_DPI_FORWARD`: increases the DPI; decreases when shifted;
--   `POINTER_SNIPING_DPI_REVERSE`: decreases the DPI; increases when shifted.
+- `POINTER_SNIPING_DPI_FORWARD`: increases the DPI; decreases when shifted;
+- `POINTER_SNIPING_DPI_REVERSE`: decreases the DPI; increases when shifted.
 
 There's a maximum of 4 possible values for the sniping mode DPI. See the [Dilemma documentation](../../README.md) for more information.
 
