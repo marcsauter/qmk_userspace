@@ -17,6 +17,7 @@
  */
 
 #include QMK_KEYBOARD_H
+#include "keymap_swiss_de.h"
 
 enum dilemma_keymap_layers {
     LAYER_BASE = 0,
